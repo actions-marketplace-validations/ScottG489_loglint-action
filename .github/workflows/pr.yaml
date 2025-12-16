@@ -1,10 +1,7 @@
-name: CI
+name: PR CI
 
 on:
-  push:
-    branches:
-      - master
-  repository_dispatch:
+  pull_request:
 
 jobs:
   build-push:
@@ -20,4 +17,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: scottg489/loglint-action:latest
+          tags: scottg489/loglint-action:test
